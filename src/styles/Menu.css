@@ -1,0 +1,55 @@
+.menu {
+  width: 250px;
+  height: 100vh;
+  background-color: white;
+  overflow: scroll;
+}
+
+.menu .menu-section {
+  padding: 10px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.menu .menu-section h5 {
+  text-transform: uppercase;
+  padding: 5px 25px;
+  padding-bottom: 10px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.menu .menu-section .menu-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.menu .menu-section .menu-content .icon {
+  color: rgba(0, 0, 0, 0.65);
+  padding: 10px 25px;
+}
+
+.menu .menu-section .menu-content:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.menu .menu-section .menu-content:active {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.menu .menu-section .menu-content:active .icon {
+  color: red;
+}
+
+.menu::-webkit-scrollbar {
+  display: none;
+}
+
+.menu {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/*# sourceMappingURL=Menu.css.map */

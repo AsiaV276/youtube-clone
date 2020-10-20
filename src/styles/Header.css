@@ -1,0 +1,82 @@
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header .header-left {
+  margin-left: 7px;
+}
+
+.header .header-left .logo {
+  margin-left: 15px;
+}
+
+.header .header-left,
+.header .header-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header form input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 5px 10px;
+  font-size: 20px;
+  border: 1px lightgray solid;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.header form button {
+  padding: 5px 25px;
+  border: 1px lightgray solid;
+  border-left: none;
+  cursor: pointer;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.header form button .searchIcon {
+  color: gray;
+  font-size: 20px;
+}
+
+.header .icon {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.header .profile-pic {
+  width: 40px;
+  height: auto;
+}
+/*# sourceMappingURL=Header.css.map */

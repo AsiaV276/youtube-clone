@@ -1,0 +1,46 @@
+$menuFontColor: rgba(0, 0, 0, 0.65);
+
+.sidebar-container {
+    height: 100vh;
+    width: fit-content;
+    background-color: white;
+    margin-top: 58px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+
+    .sidebar-content {
+        text-align: center;
+        width: 70px;
+        height: auto;
+        cursor: pointer;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        color: $menuFontColor;
+
+        p {
+            font-size: 10px;
+        }
+    }
+    .sidebar-content:hover {
+        background-color:  rgba(0, 0, 0, 0.05);
+    }
+    .sidebar-content:active {
+        color: red;
+    }
+    .menu {
+        display: none;
+
+    }
+}
+
+@media only screen and (min-width: 1325px) {
+    .sidebar-container {
+        .sidebar-content {
+            display: none;
+        }
+        .menu {
+            display: block;
+        }
+    }   
+}

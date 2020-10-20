@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    background-color: #f8f8f8;
+    height: 2000px;
+
+    main {
+        display: flex;
+        padding-top: 80px;
+        padding-left: 70px;
+        display: flex;
+        flex: 1;
+        height: 2000px;
+        //margin-left: 70px;
+    }
+}
+
+.logo {
+    height: auto;
+    width: 85px;
+}
+
+.menu-container {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+}
+
+@media only screen and (min-width: 1325px) {
+    .app {
+        main {
+            padding-left: 250px;
+        }
+    }
+    
+}
