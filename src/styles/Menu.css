@@ -32,6 +32,11 @@
   padding: 10px 25px;
 }
 
+.menu .menu-section .menu-content p {
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
 .menu .menu-section .menu-content:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
@@ -42,6 +47,10 @@
 
 .menu .menu-section .menu-content:active .icon {
   color: red;
+}
+
+.menu .menu-section .menu-content:active p {
+  font-weight: bold;
 }
 
 .menu::-webkit-scrollbar {

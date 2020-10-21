@@ -12,13 +12,13 @@ import SearchIcon from '@material-ui/icons/Search';
 
 function Header() {
     const isMenuOpen = false;
-    const toggleMenu = () => {
+    /*const toggleMenu = () => {
         isMenuOpen = !isMenuOpen;
-    }
+    }*/
     return (
         <div className="header">
             <div className="header-left">
-                <IconButton onClick={toggleMenu}>
+                <IconButton>
                     <MenuIcon className="icon"/>
                 </IconButton>
                 <img src={logo} alt="" className="logo"/>

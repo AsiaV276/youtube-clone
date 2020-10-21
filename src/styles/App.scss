@@ -8,13 +8,9 @@
     height: 2000px;
 
     main {
-        display: flex;
         padding-top: 80px;
         padding-left: 70px;
-        display: flex;
-        flex: 1;
         height: 2000px;
-        //margin-left: 70px;
     }
 }
 
@@ -23,12 +19,27 @@
     width: 85px;
 }
 
-.menu-container {
+#menu-container {
     display: none;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
+    z-index: 2;
+
+    .header-left {
+        padding-left: 12px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        display: flex;
+        align-items: center;
+        background-color: white;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        width: 238px;
+        .logo {
+            margin-left: 15px;
+        }
+    }
 }
 
 @media only screen and (min-width: 1325px) {

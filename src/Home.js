@@ -2,18 +2,67 @@ import React from 'react'
 import './styles/Home.css'
 import VideoCard from './VideoCard'
 
-function RecommendedVideos() {
+function Home() {
     return (
-        <div className="videos-container">
-            <h2>Recommended</h2>
-            <VideoCard/>
-            <VideoCard/>
-            <VideoCard/>
-            <VideoCard/>
-            <VideoCard/>
-            <VideoCard/>
+        <div id="home">
+            <div className="videos-container">
+                <VideoCard
+                    videoTitle="GIANT Pumpkin Carving Contest"
+                    thumbnailUrl="https://i.ytimg.com/vi/4CqwkiaXEOQ/mqdefault.jpg"
+                    channelTitle="Dude Perfect"
+                    viewCount="5786097"
+                />
+                <VideoCard
+                    videoTitle="GIANT Pumpkin Carving Contest"
+                    thumbnailUrl="https://i.ytimg.com/vi/4CqwkiaXEOQ/mqdefault.jpg"
+                    channelTitle="Dude Perfect"
+                    viewCount="5786097"
+                />
+                <VideoCard
+                    videoTitle="GIANT Pumpkin Carving Contest"
+                    thumbnailUrl="https://i.ytimg.com/vi/4CqwkiaXEOQ/mqdefault.jpg"
+                    channelTitle="Dude Perfect"
+                    viewCount="5786097"
+                />
+                <VideoCard
+                    videoTitle="GIANT Pumpkin Carving Contest"
+                    thumbnailUrl="https://i.ytimg.com/vi/4CqwkiaXEOQ/mqdefault.jpg"
+                    channelTitle="Dude Perfect"
+                    viewCount="5786097"
+                />
+                <VideoCard
+                    videoTitle="GIANT Pumpkin Carving Contest"
+                    thumbnailUrl="https://i.ytimg.com/vi/4CqwkiaXEOQ/mqdefault.jpg"
+                    channelTitle="Dude Perfect"
+                    viewCount="5786097"
+                />
+                <VideoCard
+                    videoTitle="GIANT Pumpkin Carving Contest"
+                    thumbnailUrl="https://i.ytimg.com/vi/4CqwkiaXEOQ/mqdefault.jpg"
+                    channelTitle="Dude Perfect"
+                    viewCount="5786097"
+                />
+                <VideoCard
+                    videoTitle="GIANT Pumpkin Carving Contest"
+                    thumbnailUrl="https://i.ytimg.com/vi/4CqwkiaXEOQ/mqdefault.jpg"
+                    channelTitle="Dude Perfect"
+                    viewCount="5786097"
+                />
+                <VideoCard
+                    videoTitle="GIANT Pumpkin Carving Contest"
+                    thumbnailUrl="https://i.ytimg.com/vi/4CqwkiaXEOQ/mqdefault.jpg"
+                    channelTitle="Dude Perfect"
+                    viewCount="5786097"
+                />
+                <VideoCard
+                    videoTitle="GIANT Pumpkin Carving Contest"
+                    thumbnailUrl="https://i.ytimg.com/vi/4CqwkiaXEOQ/mqdefault.jpg"
+                    channelTitle="Dude Perfect"
+                    viewCount="5786097"
+                />
+            </div>
         </div>
     )
 }
 
-export default RecommendedVideos
+export default Home

@@ -1,0 +1,37 @@
+.videos-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    gap: 2%;
+    .videoCard {
+        width: 30%;
+        max-width: 300px;
+        margin-bottom: 50px;
+
+        .thumbnail {
+            width: 100%;
+            height: auto;
+        }
+        .videoCard-info {
+            display: flex;
+            gap: 10px;
+            padding: 10px 20px 0px 0px;
+
+            .video-text {
+                //padding: 10px;
+
+                .video-title {
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: black;
+                }
+                p {
+                    font-size: small;
+                    color: gray;
+                }
+            }
+            
+        }
+    }
+}
+

@@ -1,7 +1,6 @@
 $menuFontColor: rgba(0, 0, 0, 0.65);
 
 .menu {
-    //display: none;
     width: 250px;
     height: 100vh;
     background-color: white;
@@ -27,6 +26,10 @@ $menuFontColor: rgba(0, 0, 0, 0.65);
                 color:  $menuFontColor;
                 padding: 10px 25px;
             }
+            p {
+                font-size: 14px;
+                margin-bottom: 3px;
+            }
         }
         .menu-content:hover {
             background-color:  rgba(0, 0, 0, 0.05);
@@ -35,6 +38,9 @@ $menuFontColor: rgba(0, 0, 0, 0.65);
             background-color: rgba(0, 0, 0, 0.35);
             .icon {
                 color: red;
+            }
+            p {
+                font-weight: bold;
             }
         }
     }

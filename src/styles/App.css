@@ -9,15 +9,8 @@
 }
 
 .app main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding-top: 80px;
   padding-left: 70px;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   height: 2000px;
 }
 
@@ -26,12 +19,32 @@
   width: 85px;
 }
 
-.menu-container {
+#menu-container {
   display: none;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
+  z-index: 2;
+}
+
+#menu-container .header-left {
+  padding-left: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  width: 238px;
+}
+
+#menu-container .header-left .logo {
+  margin-left: 15px;
 }
 
 @media only screen and (min-width: 1325px) {

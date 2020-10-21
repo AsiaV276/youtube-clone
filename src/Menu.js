@@ -1,8 +1,6 @@
 import React from 'react'
 import './styles/Menu.css'
 import './styles/App.css'
-import logo from './images/YoutubeLogo.png';
-import MenuIcon from '@material-ui/icons/Menu';
 import HomeIcon from '@material-ui/icons/Home';
 import WhatshotIcon from '@material-ui/icons/Whatshot';
 import SubscriptionsIcon from '@material-ui/icons/Subscriptions';
@@ -16,7 +14,6 @@ import AddCircleIcon from '@material-ui/icons/AddCircle';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import TheatersIcon from '@material-ui/icons/Theaters';
 import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
-
 import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
 import SettingsIcon from '@material-ui/icons/Settings';
 import FlagIcon from '@material-ui/icons/Flag';
@@ -29,14 +26,8 @@ function Menu() {//isOpen
     //returns menu display style to open and close menu
     
     return (
-        //<div className="menu-container" style={toggleMenu}>
-            <div className="menu"> {/* style={menuStyle} */}
-                {/*<div className="menu-section">
-                    <div className="menu-content">
-                        <MenuIcon className="icon"/>
-                        <img src={logo} alt="" className="logo"/>
-                    </div>
-                </div>*/}
+        
+            <div className="menu"> 
                 <div className="menu-section">
                     <div className="menu-content">
                         <HomeIcon className="icon"/>
@@ -58,7 +49,7 @@ function Menu() {//isOpen
                     </div>
                     <div className="menu-content">
                         <HistoryIcon className="icon"/>
-                        <p>Trending</p>
+                        <p>History</p>
                     </div>
                     <div className="menu-content">
                         <PlayArrowIcon className="icon"/>
@@ -69,12 +60,12 @@ function Menu() {//isOpen
                         <p>Watch later</p>
                     </div>
                     <div className="menu-content">
-                        <PlaylistPlayIcon className="icon"/>
-                        <p>Playlist</p>
-                    </div>
-                    <div className="menu-content">
                         <ThumbUpIcon className="icon"/>
                         <p>Liked videos</p>
+                    </div>
+                    <div className="menu-content">
+                        <PlaylistPlayIcon className="icon"/>
+                        <p>Playlist</p>
                     </div>
                 </div>
                 <div className="menu-section">
@@ -121,9 +112,7 @@ function Menu() {//isOpen
                         <p>Send feedback</p>
                     </div>
                 </div>
-                
             </div>
-        //</div>
     )
 }
 

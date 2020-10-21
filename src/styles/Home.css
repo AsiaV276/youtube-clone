@@ -2,9 +2,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: blueviolet 1px solid;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
-/*# sourceMappingURL=RecommendedVideos.css.map */
+/*# sourceMappingURL=Home.css.map */

@@ -2,20 +2,20 @@ import { Avatar } from '@material-ui/core'
 import React from 'react'
 import './styles/VideoCard.css'
 
-function VideoCard({image, title, channel, views, timestamp, channelImage}) {
+function VideoCard({videoTitle, channelTitle, viewCount, publishedAt, thumbnailUrl}) {
     return (
         <div className="videoCard">
-            <img src={image} alt=""/>
+            <img src={thumbnailUrl} alt="" className="thumbnail"/>
             <div className="videoCard-info">
                 <Avatar
-                className="videoCard-avatar"
-                alt={channel}
-                src={channelImage}
+                    className="videoCard-avatar"
+                    //alt={channel}
+                    //src={channelImage}
                 />
                 <div className="video-text">
-                    <h4>{title}</h4>
-                    <p>{channel}</p>
-                    <p>{views} {timestamp}</p>
+                    <p className="video-title">{videoTitle}</p>
+                    <p>{channelTitle}</p>
+                    <p>{viewCount} {" views"} {publishedAt}</p>
                 </div>
             </div>
         </div>

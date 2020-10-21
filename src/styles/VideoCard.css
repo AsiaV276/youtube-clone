@@ -1,1 +1,43 @@
-/* No CSS *//*# sourceMappingURL=VideoCard.css.map */
+.videos-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2%;
+}
+
+.videos-container .videoCard {
+  width: 30%;
+  max-width: 300px;
+  margin-bottom: 50px;
+}
+
+.videos-container .videoCard .thumbnail {
+  width: 100%;
+  height: auto;
+}
+
+.videos-container .videoCard .videoCard-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  padding: 10px 20px 0px 0px;
+}
+
+.videos-container .videoCard .videoCard-info .video-text .video-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+}
+
+.videos-container .videoCard .videoCard-info .video-text p {
+  font-size: small;
+  color: gray;
+}
+/*# sourceMappingURL=VideoCard.css.map */

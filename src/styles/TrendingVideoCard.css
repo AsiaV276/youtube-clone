@@ -1,0 +1,15 @@
+.trending-videoCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.trending-videoCard .thumbnail {
+  width: 250px;
+  height: auto;
+}
+
+.trending-videoCard .description {
+  width: 100%;
+}
+/*# sourceMappingURL=TrendingVideoCard.css.map */
