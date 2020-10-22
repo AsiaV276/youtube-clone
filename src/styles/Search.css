@@ -1,0 +1,27 @@
+#search {
+  padding: 20px;
+}
+
+#search .search-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #606060;
+  font-size: x-small;
+}
+
+#search .search-filter h2 {
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
+#search hr {
+  height: 1px;
+  border: 0;
+  background-color: lightgray;
+  margin: 10px 0px 10px 0px;
+}
+/*# sourceMappingURL=Search.css.map */

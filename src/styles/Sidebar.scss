@@ -1,13 +1,13 @@
 $menuFontColor: rgba(0, 0, 0, 0.65);
 
 .sidebar-container {
+    display: none;
+    flex-direction: column;
     height: 100vh;
     width: fit-content;
     background-color: white;
     margin-top: 58px;
     position: fixed;
-    display: flex;
-    flex-direction: column;
 
     .sidebar-content {
         text-align: center;
@@ -31,6 +31,11 @@ $menuFontColor: rgba(0, 0, 0, 0.65);
     .menu {
         display: none;
 
+    }
+}
+@media only screen and (min-width: 500px) {
+    .sidebar-container {
+        display: flex;
     }
 }
 

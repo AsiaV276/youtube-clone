@@ -1,0 +1,22 @@
+#search {
+    padding: 20px;
+     
+    .search-filter {
+        display: flex;
+        align-items: center;
+        color: #606060;
+        font-size: x-small;
+
+        h2 {
+            margin-left: 10px;
+            text-transform: uppercase;
+        }
+    }
+
+    hr {
+        height: 1px;
+        border: 0;
+        background-color: lightgray;
+        margin: 10px 0px 10px 0px;
+    }
+}

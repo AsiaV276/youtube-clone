@@ -9,7 +9,6 @@
 
     main {
         padding-top: 80px;
-        padding-left: 70px;
         height: 2000px;
     }
 }
@@ -38,6 +37,13 @@
         width: 238px;
         .logo {
             margin-left: 15px;
+        }
+    }
+}
+@media only screen and (min-width: 500px)  {
+    .app {
+        main {
+            padding-left: 70px;
         }
     }
 }

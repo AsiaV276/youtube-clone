@@ -1,7 +1,13 @@
-.videos-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1;
-    //height: 2000px;
-    //margin-left: 70px;
+#home {
+    .home-video-topics {
+        
+    }
+
+    .videos-container {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        gap: 2%;
+        flex-wrap: wrap;
+    }
 }

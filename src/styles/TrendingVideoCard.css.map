@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,mBAAmB,CAAC;EAChB,OAAO,EAAE,IAAI;CAUhB;;AAXD,AAGI,mBAHe,CAGf,UAAU,CAAC;EACP,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,IAAI;CACf;;AANL,AAOI,mBAPe,CAOf,YAAY,CAAC;EACT,KAAK,EAAE,IAAI;CACd",
-    "sources": [
-        "TrendingVideoCard.scss"
-    ],
-    "names": [],
-    "file": "TrendingVideoCard.css"
-}

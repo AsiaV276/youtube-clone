@@ -19,6 +19,7 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import FlagIcon from '@material-ui/icons/Flag';
 import HelpIcon from '@material-ui/icons/Help';
 import FeedbackIcon from '@material-ui/icons/Feedback';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 
 
@@ -66,6 +67,10 @@ function Menu() {//isOpen
                     <div className="menu-content">
                         <PlaylistPlayIcon className="icon"/>
                         <p>Playlist</p>
+                    </div>
+                    <div className="menu-content">
+                        <ExpandMoreIcon className="icon"/>
+                        <p>Show more</p>
                     </div>
                 </div>
                 <div className="menu-section">

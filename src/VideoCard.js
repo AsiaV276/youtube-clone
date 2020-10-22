@@ -1,6 +1,7 @@
 import { Avatar } from '@material-ui/core'
 import React from 'react'
 import './styles/VideoCard.css'
+import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 function VideoCard({videoTitle, channelTitle, viewCount, publishedAt, thumbnailUrl}) {
     return (
@@ -15,8 +16,9 @@ function VideoCard({videoTitle, channelTitle, viewCount, publishedAt, thumbnailU
                 <div className="video-text">
                     <p className="video-title">{videoTitle}</p>
                     <p>{channelTitle}</p>
-                    <p>{viewCount} {" views"} {publishedAt}</p>
+                    <p>{viewCount} {" views"} &bull; {publishedAt}</p>
                 </div>
+                <MoreVertIcon className="more-icon"/>
             </div>
         </div>
     )

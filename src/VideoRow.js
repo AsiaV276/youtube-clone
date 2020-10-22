@@ -1,7 +1,7 @@
 import React from 'react'
-import './styles/TrendingVideoCard.css'
+import './styles/VideoRow.css'
 
-function TrendingVideoCard({videoTitle, channelTitle, viewCount, publishedAt, thumbnailUrl, description}) {
+function VideoRow({videoTitle, channelTitle, viewCount, publishedAt, thumbnailUrl, description}) {
     return (
         <div className="trending-videoCard">
             <img src={thumbnailUrl} alt="" className="thumbnail"/>
@@ -15,4 +15,4 @@ function TrendingVideoCard({videoTitle, channelTitle, viewCount, publishedAt, th
     )
 }
 
-export default TrendingVideoCard
+export default VideoRow

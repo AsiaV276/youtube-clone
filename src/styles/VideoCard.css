@@ -1,43 +1,50 @@
-.videos-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 2%;
-}
-
-.videos-container .videoCard {
-  width: 30%;
+.videoCard {
+  width: 100%;
   max-width: 300px;
   margin-bottom: 50px;
 }
 
-.videos-container .videoCard .thumbnail {
+.videoCard .thumbnail {
   width: 100%;
   height: auto;
 }
 
-.videos-container .videoCard .videoCard-info {
+.videoCard .videoCard-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
-  padding: 10px 20px 0px 0px;
+  padding: 10px 5px 0px 0px;
 }
 
-.videos-container .videoCard .videoCard-info .video-text .video-title {
+.videoCard .videoCard-info .videoCard-avatar {
+  z-index: 0;
+}
+
+.videoCard .videoCard-info .video-text .video-title {
   font-size: 14px;
   font-weight: 500;
   color: black;
 }
 
-.videos-container .videoCard .videoCard-info .video-text p {
+.videoCard .videoCard-info .video-text p {
   font-size: small;
   color: gray;
+}
+
+.videoCard .videoCard-info .more-icon {
+  color: gray;
+}
+
+@media only screen and (min-width: 500px) {
+  .videoCard {
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .videoCard {
+    width: 30%;
+  }
 }
 /*# sourceMappingURL=VideoCard.css.map */

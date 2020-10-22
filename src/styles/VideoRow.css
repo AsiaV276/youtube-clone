@@ -5,11 +5,12 @@
 }
 
 .trending-videoCard .thumbnail {
-  width: 250px;
+  width: 40%;
+  max-width: 400px;
   height: auto;
 }
 
 .trending-videoCard .description {
   width: 100%;
 }
-/*# sourceMappingURL=TrendingVideoCard.css.map */
+/*# sourceMappingURL=VideoRow.css.map */

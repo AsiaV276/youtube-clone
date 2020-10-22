@@ -1,4 +1,9 @@
 .sidebar-container {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100vh;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -6,13 +11,6 @@
   background-color: white;
   margin-top: 58px;
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .sidebar-container .sidebar-content {
@@ -39,6 +37,14 @@
 
 .sidebar-container .menu {
   display: none;
+}
+
+@media only screen and (min-width: 500px) {
+  .sidebar-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 @media only screen and (min-width: 1325px) {

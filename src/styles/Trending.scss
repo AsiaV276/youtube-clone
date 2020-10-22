@@ -1,21 +1,22 @@
 #trending {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     flex: 1;
-    border: blue 1px solid;
 
     .trending-container {
-        width: 750px;
-        justify-self: center;
+        flex: 1;
         border: blue 1px solid;
+        margin-left: auto;
+        margin-right: auto;
 
         .trending-topics {
             display: flex;
             gap: 35px;
         }
-        /*.trending-videos-container {
-
-        }*/
+        .trending-videos-container {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+        }
     }
 }

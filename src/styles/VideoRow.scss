@@ -1,8 +1,8 @@
 .trending-videoCard {
     display: flex;
-
     .thumbnail {
-        width: 250px;
+        width: 40%;
+        max-width: 400px;
         height: auto;
     }
     .description {
