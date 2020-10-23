@@ -6,8 +6,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 5px;
-  background-color: white;
-  opacity: 98%;
+  background-color: rgba(255, 255, 255, 0.98);
   position: fixed;
   top: 0;
   width: 100%;
