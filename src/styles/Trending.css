@@ -1,4 +1,4 @@
-#trending {
+#trending .trending-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,15 +9,13 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  padding: 20px;
 }
 
-#trending .trending-container {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  border: blue 1px solid;
-  margin-left: auto;
-  margin-right: auto;
+#trending .trending-container hr {
+  height: 0;
+  border-top: rgba(0, 0, 0, 0.2) 1px solid;
+  margin-bottom: 20px;
 }
 
 #trending .trending-container .trending-topics {
@@ -25,6 +23,31 @@
   display: -ms-flexbox;
   display: flex;
   gap: 35px;
+  margin-bottom: 20px;
+}
+
+#trending .trending-container .trending-topics .topics-icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#trending .trending-container .trending-topics .topics-icon-container p {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+#trending .trending-container .trending-topics .topics-icon {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  font-size: 50px;
+  border-radius: 50%;
 }
 
 #trending .trending-container .trending-videos-container {

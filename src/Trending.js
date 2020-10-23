@@ -1,5 +1,4 @@
-import { SportsEsports } from '@material-ui/icons'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './styles/Trending.css'
 import VideoRow from './VideoRow'
 import TheatersIcon from '@material-ui/icons/Theaters'
@@ -8,44 +7,56 @@ import ReceiptIcon from '@material-ui/icons/Receipt'
 import MusicNoteIcon from '@material-ui/icons/MusicNote'
 
 function Trending() {
+    const [trendingVideos, setTrendingVideos] = useState([])
+    
+    useEffect(() => {
+        const api_key = 'AIzaSyDfYvcVytioWmYX0sG-_IlA4kWHx40RzHg'
+        fetch(`https://www.googleapis.com/youtube/v3/videos/?key=${api_key}&part=snippet&chart=mostPopular&maxResults=3`)
+        .then(res => res.json())
+        .then(
+            (data) => {
+                setTrendingVideos(data.items)
+            }
+        )
+        .catch((error) => {
+            console.error('Error:', error);
+          });
+    }, [])
+
+    console.log(trendingVideos);
     return (
         <div id="trending">
             <div className="trending-container">
                 <div className="trending-topics">
-                    <MusicNoteIcon/>
-                    <SportsEsportsIcon/>
-                    <ReceiptIcon/>
-                    <TheatersIcon/>
+                    <div className="topics-icon-container">
+                        <MusicNoteIcon className="topics-icon"/>
+                        <p>Music</p>
+                    </div>
+                    <div className="topics-icon-container">
+                        <SportsEsportsIcon className="topics-icon"/>
+                        <p>Sports</p>
+                    </div>
+                    <div className="topics-icon-container">
+                        <ReceiptIcon className="topics-icon"/>
+                        <p>News</p>
+                    </div>
+                    <div className="topics-icon-container">
+                        <TheatersIcon className="topics-icon"/>
+                        <p>Movies</p>
+                    </div>
                 </div>
+                <hr/>
                 <div className="trending-videos-container">
-                    <VideoRow
-                        videoTitle="Your body language may shape who you are | Amy Cuddy"
-                        thumbnailUrl="https://i.ytimg.com/vi/Ks-_Mh1QhMc/mqdefault.jpg"
-                        channelTitle="TED"
-                        viewCount="18649522"
-                        description="Body language affects how others see us, but it may also change how we see ourselves. Social psychologist Amy Cuddy argues that"
-                    />
-                    <VideoRow
-                        videoTitle="GIANT Pumpkin Carving Contest"
-                        thumbnailUrl="https://i.ytimg.com/vi/4CqwkiaXEOQ/mqdefault.jpg"
-                        channelTitle="Dude Perfect"
-                        viewCount="5786097"
-                        description="Hide and seek in a HUGE store, carving massive pumpkins, plus your two favorite segments all in Overtime 19! Special thanks to Bass Pro Shops for sponsoring this video!"
-                    />
-                    <VideoRow
-                        videoTitle="GIANT Pumpkin Carving Contest"
-                        thumbnailUrl="https://i.ytimg.com/vi/4CqwkiaXEOQ/mqdefault.jpg"
-                        channelTitle="Dude Perfect"
-                        viewCount="5786097"
-                        description="Hide and seek in a HUGE store, carving massive pumpkins, plus your two favorite segments all in Overtime 19! Special thanks to Bass Pro Shops for sponsoring this video!"
-                    />
-                    <VideoRow
-                        videoTitle="GIANT Pumpkin Carving Contest"
-                        thumbnailUrl="https://i.ytimg.com/vi/4CqwkiaXEOQ/mqdefault.jpg"
-                        channelTitle="Dude Perfect"
-                        viewCount="5786097"
-                        description="Hide and seek in a HUGE store, carving massive pumpkins, plus your two favorite segments all in Overtime 19! Special thanks to Bass Pro Shops for sponsoring this video!"
-                    />
+                    {trendingVideos.map((item) => (
+                        <VideoRow
+                            key={item.id}
+                            videoTitle={item.snippet.title}
+                            thumbnailUrl={item.snippet.thumbnails.medium.url}
+                            channelTitle={item.snippet.channelTitle}
+                            //viewCount={item.snippet.statistics.viewCount}
+                            description={item.snippet.description}
+                        />
+                    ))}
                 </div>
             </div>
         </div>

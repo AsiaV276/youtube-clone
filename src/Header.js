@@ -14,17 +14,13 @@ import {
 } from 'react-router-dom';
 
 function Header() {
-    
+    const [inputSearch, setInputSearch] = useState('')
   
-    
     //performSearch();
     //perform search on submit/click 
     //performSearch() returns/routes to Search page with data 
     //data mapped through on search page
     
-
-
-  
     return (
         <div className="header">
             <div className="header-left">
@@ -39,8 +35,8 @@ function Header() {
                 <input 
                     type="text" 
                     placeholder="Search"
-                    value={inputSearch}
-                    onChange={e => setInputSearch(e.target.value)}
+                    //value={inputSearch}
+                    //onChange={e => setInputSearch(e.target.value)}
                 />
                 <Link to={`/search/${inputSearch}`} className="button">
                     <SearchIcon className="searchIcon"/>

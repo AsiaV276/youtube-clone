@@ -1,5 +1,7 @@
 import React from 'react'
 import './styles/VideoRow.css'
+import MoreVertIcon from '@material-ui/icons/MoreVert';
+import CheckCircleRoundedIcon from '@material-ui/icons/CheckCircleRounded';
 
 function VideoRow({videoTitle, channelTitle, viewCount, publishedAt, thumbnailUrl, description}) {
     return (
@@ -7,10 +9,11 @@ function VideoRow({videoTitle, channelTitle, viewCount, publishedAt, thumbnailUr
             <img src={thumbnailUrl} alt="" className="thumbnail"/>
             <div className="videoCard-info">
                 <p className="video-title">{videoTitle}</p>
-                <p>{channelTitle}</p>
-                <p>{viewCount} {" views"} {publishedAt}</p>
+                <p className="channel-title">{channelTitle} <span><CheckCircleRoundedIcon className="verified-icon"/></span></p>
+                {/*<p>{viewCount} {" views"} {publishedAt}</p>*/}
                 <p className="description">{description}</p>
             </div>
+            <MoreVertIcon className="more-icon"/>
         </div>
     )
 }

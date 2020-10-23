@@ -16,7 +16,7 @@ function VideoCard({videoTitle, channelTitle, viewCount, publishedAt, thumbnailU
                 <div className="video-text">
                     <p className="video-title">{videoTitle}</p>
                     <p>{channelTitle}</p>
-                    <p>{viewCount} {" views"} &bull; {publishedAt}</p>
+                    {/*<p>{viewCount} {" views"} &bull; {publishedAt}</p>*/}
                 </div>
                 <MoreVertIcon className="more-icon"/>
             </div>

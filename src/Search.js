@@ -2,7 +2,7 @@ import React from 'react'
 import './styles/Search.css'
 import TuneIcon from '@material-ui/icons/Tune';
 
-function Search(apiData) {
+function Search() {
     /* // Search for a specified string.
         function search() {
             var q = $('#query').val();
