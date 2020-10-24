@@ -20,34 +20,35 @@ import FlagIcon from '@material-ui/icons/Flag';
 import HelpIcon from '@material-ui/icons/Help';
 import FeedbackIcon from '@material-ui/icons/Feedback';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-
+import { 
+    Link 
+} from 'react-router-dom';
 
 
 function Menu() {//isOpen
     //returns menu display style to open and close menu
     
     return (
-        
             <div className="menu"> 
                 <div className="menu-section">
-                    <div className="menu-content">
+                    <Link to="/" className="menu-content">
                         <HomeIcon className="icon"/>
                         <p>Home</p>
-                    </div>
-                    <div className="menu-content">
+                    </Link>
+                    <Link to="/trending" className="menu-content">
                         <WhatshotIcon className="icon"/>
                         <p>Trending</p>
-                    </div>
-                    <div className="menu-content">
+                    </Link>
+                    <Link to="/subscriptions" className="menu-content">
                         <SubscriptionsIcon className="icon"/>
                         <p>Subscriptions</p>
-                    </div>
+                    </Link>
                 </div>
                 <div className="menu-section">
-                    <div className="menu-content">
+                    <Link to="/library" className="menu-content">
                         <VideoLibraryIcon className="icon"/>
                         <p>Library</p>
-                    </div>
+                    </Link>
                     <div className="menu-content">
                         <HistoryIcon className="icon"/>
                         <p>History</p>

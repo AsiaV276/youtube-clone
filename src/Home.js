@@ -7,7 +7,7 @@ function Home() {
     
     useEffect(() => {
         const api_key = 'AIzaSyDfYvcVytioWmYX0sG-_IlA4kWHx40RzHg'
-        fetch(`https://www.googleapis.com/youtube/v3/videos/?key=${api_key}&part=snippet&chart=mostPopular&maxResults=12`)
+        fetch(`https://www.googleapis.com/youtube/v3/videos/?key=${api_key}&part=snippet,contentDetails,statistics&chart=mostPopular&maxResults=12`)
         .then(res => res.json())
         .then(
             (data) => {
@@ -32,7 +32,7 @@ function Home() {
                         videoTitle={item.snippet.title}
                         thumbnailUrl={item.snippet.thumbnails.medium.url}
                         channelTitle={item.snippet.channelTitle}
-                        //viewCount={item.statistics.}
+                        viewCount={item.statistics.viewCount}
                     />
                 ))}
             </div>
