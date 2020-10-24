@@ -25,22 +25,12 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { 
     Link 
 } from 'react-router-dom';
-//import Menu from './Menu'
 
 
 function Sidebar() {
-    /*const isOpen = false
-    let menuStyle;
-    if (isOpen.isOpen == false) {
-        menuStyle = {display: 'none'}
-    }
-    else if (isOpen.isOpen == true) {
-        menuStyle = {display: 'block'};
-    }
-    console.log(menuStyle);*/
+    
     return (
         <div className="sidebar-container">
-            {/*<Menu isOpen={isOpen}/>*/}
             <Link to="/" className="sidebar-content">
                 <HomeIcon className="icon"/>
                 <p>Home</p>
@@ -90,12 +80,12 @@ function Sidebar() {
                         <p>Watch later</p>
                     </div>
                     <div className="menu-content">
-                        <PlaylistPlayIcon className="icon"/>
-                        <p>Playlist</p>
-                    </div>
-                    <div className="menu-content">
                         <ThumbUpIcon className="icon"/>
                         <p>Liked videos</p>
+                    </div>
+                    <div className="menu-content">
+                        <PlaylistPlayIcon className="icon"/>
+                        <p>Playlist</p>
                     </div>
                     <div className="menu-content">
                         <ExpandMoreIcon className="icon"/>

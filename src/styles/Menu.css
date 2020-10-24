@@ -25,10 +25,11 @@
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.65);
 }
 
 .menu .menu-section .menu-content .icon {
-  color: rgba(0, 0, 0, 0.65);
   padding: 10px 25px;
 }
 

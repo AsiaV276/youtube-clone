@@ -18,7 +18,7 @@ function Home() {
             console.error('Error:', error);
           });
     }, [])
-    console.log(homeVideos);
+
     return (
         <div id="home">
             <div className="home-video-topics">
@@ -32,63 +32,9 @@ function Home() {
                         videoTitle={item.snippet.title}
                         thumbnailUrl={item.snippet.thumbnails.medium.url}
                         channelTitle={item.snippet.channelTitle}
-                        //viewCount={item.snippet.}
+                        //viewCount={item.statistics.}
                     />
                 ))}
-                {/*<VideoCard
-                    videoTitle="GIANT Pumpkin Carving Contest"
-                    thumbnailUrl="https://i.ytimg.com/vi/4CqwkiaXEOQ/mqdefault.jpg"
-                    channelTitle="Dude Perfect"
-                    viewCount="5786097"
-                />
-                <VideoCard
-                    videoTitle="GIANT Pumpkin Carving Contest"
-                    thumbnailUrl="https://i.ytimg.com/vi/4CqwkiaXEOQ/mqdefault.jpg"
-                    channelTitle="Dude Perfect"
-                    viewCount="5786097"
-                />
-                <VideoCard
-                    videoTitle="GIANT Pumpkin Carving Contest"
-                    thumbnailUrl="https://i.ytimg.com/vi/4CqwkiaXEOQ/mqdefault.jpg"
-                    channelTitle="Dude Perfect"
-                    viewCount="5786097"
-                />
-                <VideoCard
-                    videoTitle="GIANT Pumpkin Carving Contest"
-                    thumbnailUrl="https://i.ytimg.com/vi/4CqwkiaXEOQ/mqdefault.jpg"
-                    channelTitle="Dude Perfect"
-                    viewCount="5786097"
-                />
-                <VideoCard
-                    videoTitle="GIANT Pumpkin Carving Contest"
-                    thumbnailUrl="https://i.ytimg.com/vi/4CqwkiaXEOQ/mqdefault.jpg"
-                    channelTitle="Dude Perfect"
-                    viewCount="5786097"
-                />
-                <VideoCard
-                    videoTitle="GIANT Pumpkin Carving Contest"
-                    thumbnailUrl="https://i.ytimg.com/vi/4CqwkiaXEOQ/mqdefault.jpg"
-                    channelTitle="Dude Perfect"
-                    viewCount="5786097"
-                />
-                <VideoCard
-                    videoTitle="GIANT Pumpkin Carving Contest"
-                    thumbnailUrl="https://i.ytimg.com/vi/4CqwkiaXEOQ/mqdefault.jpg"
-                    channelTitle="Dude Perfect"
-                    viewCount="5786097"
-                />
-                <VideoCard
-                    videoTitle="GIANT Pumpkin Carving Contest"
-                    thumbnailUrl="https://i.ytimg.com/vi/4CqwkiaXEOQ/mqdefault.jpg"
-                    channelTitle="Dude Perfect"
-                    viewCount="5786097"
-                />
-                <VideoCard
-                    videoTitle="GIANT Pumpkin Carving Contest"
-                    thumbnailUrl="https://i.ytimg.com/vi/4CqwkiaXEOQ/mqdefault.jpg"
-                    channelTitle="Dude Perfect"
-                    viewCount="5786097"
-                />*/}
             </div>
         </div>
     )

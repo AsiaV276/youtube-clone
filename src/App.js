@@ -26,15 +26,6 @@ function App() {
       
       <Router>
         <Header/>
-        <div id="menu-container">
-          <div className="header-left">
-            <IconButton>
-                <MenuIcon className="icon"/>
-            </IconButton>
-            <img src={logo} alt="" className="logo"/>
-          </div>
-          <Menu/>
-        </div>
         <Sidebar/>
         <main>
           <Switch>

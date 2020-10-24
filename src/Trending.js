@@ -22,8 +22,7 @@ function Trending() {
             console.error('Error:', error);
           });
     }, [])
-
-    console.log(trendingVideos);
+    
     return (
         <div id="trending">
             <div className="trending-container">

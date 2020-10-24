@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Menu from './Menu';
 import './styles/Header.css'
 import './styles/App.css'
 import MenuIcon from '@material-ui/icons/Menu';
@@ -15,16 +16,25 @@ import {
 
 function Header() {
     const [inputSearch, setInputSearch] = useState('')
-  
+
+    const openMenu = () => {
+        let menu = document.getElementById('menu-container')
+        menu.style.display = 'block'
+    }
+    const closeMenu = () => {
+        let menu = document.getElementById('menu-container')
+        menu.style.display = 'none'
+    }
     //performSearch();
     //perform search on submit/click 
     //performSearch() returns/routes to Search page with data 
     //data mapped through on search page
     
     return (
+        <>
         <div className="header">
             <div className="header-left">
-                <IconButton>
+                <IconButton onClick={openMenu}>
                     <MenuIcon className="icon"/>
                 </IconButton>
                 <Link to="/">
@@ -57,6 +67,16 @@ function Header() {
                 <AccountCircleIcon className="profile-pic"/>
             </div>
         </div>
+        <div id="menu-container">
+          <div className="header-left">
+            <IconButton onClick={closeMenu}>
+                <MenuIcon className="icon"/>
+            </IconButton>
+            <img src={logo} alt="" className="logo"/>
+          </div>
+          <Menu/>
+        </div>
+        </>
     )
 }
 
