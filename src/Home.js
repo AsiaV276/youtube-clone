@@ -19,6 +19,10 @@ function Home() {
           });
     }, [])
 
+    //const currentDateTime = '2020-10-25T00:26:24:510Z'
+    //new Date().toISOString();
+    //console.log(currentDateTime)
+
     return (
         <div id="home">
             <div className="home-video-topics">
@@ -33,6 +37,7 @@ function Home() {
                         thumbnailUrl={item.snippet.thumbnails.medium.url}
                         channelTitle={item.snippet.channelTitle}
                         viewCount={item.statistics.viewCount}
+                        //publishedAt={currentDateTime - item.snippet.publishedAt}
                     />
                 ))}
             </div>

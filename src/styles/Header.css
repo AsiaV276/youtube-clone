@@ -71,8 +71,9 @@
     border-bottom-left-radius: 2px;
   }
   .header .search .button {
-    padding: 5px 25px;
+    padding: 5px 25px 4px 25px;
     border: 1px lightgray solid;
+    background-color: #f8f8f8;
     border-left: none;
     cursor: pointer;
     border-top-right-radius: 2px;

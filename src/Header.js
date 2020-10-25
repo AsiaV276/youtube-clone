@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Menu from './Menu';
 import './styles/Header.css'
 import './styles/App.css'
@@ -18,7 +18,8 @@ import {
 
 function Header() {
     const [inputSearch, setInputSearch] = useState('')
-    const [isSignedIn, setIsSignedIn] = useState(false)
+    const [isSignedIn, setIsSignedIn] = useState(true)
+    const [menuOpen, setMenuOpen] = useState(false)
 
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     const firebaseConfig = {
@@ -29,7 +30,7 @@ function Header() {
         storageBucket: "clone-29217.appspot.com",
         messagingSenderId: "172397596944",
         appId: "1:172397596944:web:6f31c3b472a6e0ed5a1595",
-        measurementId: "G-VD31RC3610"
+        //measurementId: "G-VD31RC3610"
     };
 
     if(!firebase.apps.length){
@@ -49,14 +50,35 @@ function Header() {
         }
     };
 
+    /*useEffect(() => {
+        
+    })*/
     const openMenu = () => {
         let menu = document.getElementById('menu-container')
         menu.style.display = 'block'
+        setMenuOpen(true)
     }
     const closeMenu = () => {
         let menu = document.getElementById('menu-container')
         menu.style.display = 'none'
+        setMenuOpen(false)
+        
+        console.log(menuOpen);
+        console.log(menuOpen);
     }
+
+
+    /*if(menuOpen === true) {
+        window.addEventListener('click', function(e){   
+            if (document.getElementById('menu-container').contains(e.target)){
+              // Clicked in box
+            } else{
+              closeMenu();
+            }
+          });
+    }*/
+
+   
     //performSearch();
     //perform search on submit/click 
     //performSearch() returns/routes to Search page with data 
@@ -97,8 +119,8 @@ function Header() {
                     
                     {isSignedIn ? (
                         <>
-                            <AccountCircleIcon className="profile-pic"/> //if true, user google profile picture
-                            <p>{firebase.auth().currentUser.displayName}</p>
+                            <AccountCircleIcon className="profile-pic"/> {/*if true, user google profile picture*/}
+                            {/*<p>{firebase.auth().currentUser.displayName}</p>*/}
                         </>
                         ) : (
                         <FirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} className="signin-btn">            

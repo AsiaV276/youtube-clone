@@ -1,9 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './styles/App.css';
-import MenuIcon from '@material-ui/icons/Menu';
-import logo from './images/YouTube_Logo_2017.svg';
-import { IconButton } from '@material-ui/core';
-import Menu from './Menu';
 import Sidebar from './Sidebar';
 import { 
   BrowserRouter as Router,
