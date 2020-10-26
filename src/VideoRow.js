@@ -9,8 +9,7 @@ function VideoRow({videoTitle, channelTitle, viewCount, publishedAt, thumbnailUr
             <img src={thumbnailUrl} alt="" className="thumbnail"/>
             <div className="videoCard-info">
                 <p className="video-title">{videoTitle}</p>
-                <p className="channel-title">{channelTitle} <span><CheckCircleRoundedIcon className="verified-icon"/></span></p>
-                {/*<p>{viewCount} {" views"} {publishedAt}</p>*/}
+                <p className="channel-title">{channelTitle} <span><CheckCircleRoundedIcon className="verified-icon"/></span> &nbsp; {viewCount} {" views"} &bull; {publishedAt} {" hours ago"}</p>
                 <p className="description">{description}</p>
             </div>
             <MoreVertIcon className="more-icon"/>

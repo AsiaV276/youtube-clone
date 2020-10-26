@@ -19,9 +19,17 @@ function Home() {
           });
     }, [])
 
-    //const currentDateTime = '2020-10-25T00:26:24:510Z'
-    //new Date().toISOString();
-    //console.log(currentDateTime)
+    const currentDateTime = new Date()
+   
+    function diffHours(dt2, dt1) {
+        var newPublishedDate = new Date(dt1.replace(/-/g,'/').replace('T',' ').replace('Z',''));
+        var diff =(dt2.getTime() - newPublishedDate.getTime()) / 1000;
+        diff /= (60 * 60);
+        return Math.abs(Math.round(diff));
+    }
+    function formatNumber(num) {
+        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+    }
 
     return (
         <div id="home">
@@ -36,8 +44,8 @@ function Home() {
                         videoTitle={item.snippet.title}
                         thumbnailUrl={item.snippet.thumbnails.medium.url}
                         channelTitle={item.snippet.channelTitle}
-                        viewCount={item.statistics.viewCount}
-                        //publishedAt={currentDateTime - item.snippet.publishedAt}
+                        viewCount={formatNumber(item.statistics.viewCount)}
+                        publishedAt={diffHours(currentDateTime, item.snippet.publishedAt)}
                     />
                 ))}
             </div>

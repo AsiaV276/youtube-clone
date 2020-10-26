@@ -62,9 +62,6 @@ function Header() {
         let menu = document.getElementById('menu-container')
         menu.style.display = 'none'
         setMenuOpen(false)
-        
-        console.log(menuOpen);
-        console.log(menuOpen);
     }
 
 

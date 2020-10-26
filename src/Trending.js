@@ -11,7 +11,7 @@ function Trending() {
     
     useEffect(() => {
         const api_key = 'AIzaSyDfYvcVytioWmYX0sG-_IlA4kWHx40RzHg'
-        fetch(`https://www.googleapis.com/youtube/v3/videos/?key=${api_key}&part=snippet&chart=mostPopular&maxResults=3`)
+        fetch(`https://www.googleapis.com/youtube/v3/videos/?key=${api_key}&part=snippet,statistics&chart=mostPopular&maxResults=3`)
         .then(res => res.json())
         .then(
             (data) => {
@@ -22,6 +22,18 @@ function Trending() {
             console.error('Error:', error);
           });
     }, [])
+
+    const currentDateTime = new Date()
+   
+    function diffHours(dt2, dt1) {
+        var newPublishedDate = new Date(dt1.replace(/-/g,'/').replace('T',' ').replace('Z',''));
+        var diff =(dt2.getTime() - newPublishedDate.getTime()) / 1000;
+        diff /= (60 * 60);
+        return Math.abs(Math.round(diff));
+    }
+    function formatNumber(num) {
+        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+    }
     
     return (
         <div id="trending">
@@ -52,7 +64,8 @@ function Trending() {
                             videoTitle={item.snippet.title}
                             thumbnailUrl={item.snippet.thumbnails.medium.url}
                             channelTitle={item.snippet.channelTitle}
-                            //viewCount={item.snippet.statistics.viewCount}
+                            viewCount={formatNumber(item.statistics.viewCount)}
+                            publishedAt={diffHours(currentDateTime, item.snippet.publishedAt)}
                             description={item.snippet.description}
                         />
                     ))}

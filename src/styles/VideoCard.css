@@ -21,15 +21,39 @@
   z-index: 0;
 }
 
+.videoCard .videoCard-info .video-text {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
 .videoCard .videoCard-info .video-text .video-title {
   font-size: 14px;
   font-weight: 500;
   color: black;
+  margin-bottom: 5px;
 }
 
-.videoCard .videoCard-info .video-text p {
-  font-size: small;
-  color: gray;
+.videoCard .videoCard-info .video-text .channel-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.videoCard .videoCard-info .video-text .verified-icon {
+  height: 14px;
+  width: auto;
+  padding-left: 5px;
+}
+
+.videoCard .videoCard-info .video-text .video-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .videoCard .videoCard-info .more-icon {

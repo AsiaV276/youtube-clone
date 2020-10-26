@@ -2,6 +2,7 @@ import { Avatar } from '@material-ui/core'
 import React from 'react'
 import './styles/VideoCard.css'
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import CheckCircleRoundedIcon from '@material-ui/icons/CheckCircleRounded';
 
 function VideoCard({videoTitle, channelTitle, viewCount, publishedAt, thumbnailUrl}) {
     return (
@@ -15,8 +16,11 @@ function VideoCard({videoTitle, channelTitle, viewCount, publishedAt, thumbnailU
                 />
                 <div className="video-text">
                     <p className="video-title">{videoTitle}</p>
-                    <p>{channelTitle}</p>
-                    <p>{viewCount} {" views"} &bull; {publishedAt} {" ago"}</p>
+                    <div className="channel-title">{channelTitle} <CheckCircleRoundedIcon className="verified-icon"/></div>
+                    <div className="video-stats">
+                        <p>{viewCount} {" views"} &bull; &nbsp;</p>
+                        <p>{publishedAt} {" hours ago"}</p>
+                    </div>
                 </div>
                 <MoreVertIcon className="more-icon"/>
             </div>

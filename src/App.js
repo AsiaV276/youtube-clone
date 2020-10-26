@@ -16,10 +16,8 @@ import './styles/Header.css';
 
 
 function App() {
-
   return (
     <div className="app">
-      
       <Router>
         <Header/>
         <Sidebar/>
