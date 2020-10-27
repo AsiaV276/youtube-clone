@@ -10,8 +10,8 @@ function Trending() {
     const [trendingVideos, setTrendingVideos] = useState([])
     
     useEffect(() => {
-        const api_key = 'AIzaSyDfYvcVytioWmYX0sG-_IlA4kWHx40RzHg'
-        fetch(`https://www.googleapis.com/youtube/v3/videos/?key=${api_key}&part=snippet,statistics&chart=mostPopular&maxResults=3`)
+        
+        fetch(`https://www.googleapis.com/youtube/v3/videos/?key=${process.env.API_KEY}&part=snippet,statistics&chart=mostPopular&maxResults=3`)
         .then(res => res.json())
         .then(
             (data) => {

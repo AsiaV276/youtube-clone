@@ -5,7 +5,7 @@ import CheckCircleRoundedIcon from '@material-ui/icons/CheckCircleRounded';
 
 function VideoRow({videoTitle, channelTitle, viewCount, publishedAt, thumbnailUrl, description}) {
     return (
-        <div className="trending-videoCard">
+        <div className="videoRow-container">
             <img src={thumbnailUrl} alt="" className="thumbnail"/>
             <div className="videoCard-info">
                 <p className="video-title">{videoTitle}</p>

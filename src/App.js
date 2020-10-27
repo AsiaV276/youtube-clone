@@ -16,6 +16,7 @@ import './styles/Header.css';
 
 
 function App() {
+  const api_key = 'AIzaSyAWBNoAT3GssnbgFshc_oRsEYraBwNlGEg'
   return (
     <div className="app">
       <Router>

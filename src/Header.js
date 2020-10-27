@@ -19,7 +19,7 @@ import {
 function Header() {
     const [inputSearch, setInputSearch] = useState('')
     const [isSignedIn, setIsSignedIn] = useState(true)
-    const [menuOpen, setMenuOpen] = useState(false)
+    //const [menuOpen, setMenuOpen] = useState(false)
 
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     const firebaseConfig = {
@@ -56,12 +56,12 @@ function Header() {
     const openMenu = () => {
         let menu = document.getElementById('menu-container')
         menu.style.display = 'block'
-        setMenuOpen(true)
+        //setMenuOpen(true)
     }
     const closeMenu = () => {
         let menu = document.getElementById('menu-container')
         menu.style.display = 'none'
-        setMenuOpen(false)
+        //setMenuOpen(false)
     }
 
 
@@ -96,8 +96,8 @@ function Header() {
                     <input 
                         type="text" 
                         placeholder="Search"
-                        //value={inputSearch}
-                        //onChange={e => setInputSearch(e.target.value)}
+                        value={inputSearch}
+                        onChange={e => setInputSearch(e.target.value)}
                     />
                     <Link to={`/search/${inputSearch}`} className="button">
                         <SearchIcon className="searchIcon"/>
