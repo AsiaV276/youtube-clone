@@ -7,7 +7,7 @@ function Search() {
     const [searchVideos, setSearchVideos] = useState([])
     const searchInput = 'javascript'
     useEffect(() => {
-        fetch(`https://www.googleapis.com/youtube/v3/search/?key=${process.env.API_KEY}&part=snippet&q=${searchInput}&maxResults=12`)
+        fetch(`https://www.googleapis.com/youtube/v3/search/?key=${process.env.REACT_APP_API_KEY}&part=snippet&q=${searchInput}&maxResults=12`)
         .then(res => res.json())
         .then(
             (data) => {

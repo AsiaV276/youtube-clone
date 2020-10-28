@@ -6,7 +6,7 @@ function Home() {
     const [homeVideos, setHomeVideos] = useState([])
     
     useEffect(() => {
-        fetch(`https://www.googleapis.com/youtube/v3/videos/?key=${process.env.API_KEY}&part=snippet,contentDetails,statistics&chart=mostPopular&maxResults=12`)
+        fetch(`https://www.googleapis.com/youtube/v3/videos/?key=${process.env.REACT_APP_API_KEY}&part=snippet,contentDetails,statistics&chart=mostPopular&maxResults=12`)
         .then(res => res.json())
         .then(
             (data) => {
