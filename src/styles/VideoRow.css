@@ -4,8 +4,10 @@
   display: flex;
   height: 180px;
   width: 100%;
+  max-width: 1300px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
 .videoRow-container .thumbnail {
@@ -15,12 +17,17 @@
 
 .videoRow-container .videoCard-info {
   padding: 5px 5px 5px 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .videoRow-container .videoCard-info .video-title {
   font-size: 20px;
   font-weight: 500;
   color: black;
+  height: 60px;
+  overflow: hidden;
 }
 
 .videoRow-container .videoCard-info .channel-title {

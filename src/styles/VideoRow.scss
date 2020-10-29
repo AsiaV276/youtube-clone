@@ -2,7 +2,9 @@
     display: flex;
     height: 180px;
     width: 100%;
+    max-width: 1300px;
     box-sizing: border-box;
+    margin-bottom: 20px;
     
     .thumbnail {
         width: 320px;
@@ -10,10 +12,13 @@
     }
     .videoCard-info {
         padding: 5px 5px 5px 20px;
+        flex: 1;
         .video-title {
             font-size: 20px;
             font-weight: 500;
             color: black;
+            height: 60px;
+            overflow: hidden;
         }
         .channel-title {
             display: flex;
