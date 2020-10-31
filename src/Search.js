@@ -28,9 +28,6 @@ function Search({searchInput}) {
         diff /= (60 * 60);
         return Math.abs(Math.round(diff));
     }
-    function formatNumber(num) {
-        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
-    }
     return (
         <div id="search">
             <div className="search-filter">

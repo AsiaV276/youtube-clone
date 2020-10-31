@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './styles/App.css';
 import Sidebar from './Sidebar';
-//import Header from './Header';
 import { 
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from 'react-router-dom';
-import { Redirect, useHistory } from 'react-router';
 import Home from './Home';
 import Trending from './Trending';
 import Subscriptions from './Subscriptions';
