@@ -14,13 +14,6 @@
         .logo {
             margin-left: 15px;
         }
-        /*#largeLogo {
-            display: none;
-        }
-        #mobileLogo {
-            display: block;
-            width: 40px;
-        }*/
     }
     .header-left,
     .header-right,
@@ -79,17 +72,9 @@
     }
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 675px) {
     .header {
         padding: 5px;
-        /*.header-left {
-            #largeLogo {
-                display: block;
-            }
-            #mobileLogo {
-                display: none;
-            }
-        }*/
         .search {
             display: flex;
             flex: 1;
@@ -123,6 +108,9 @@
         .header-right {
             #appsIcon {
                 display: flex;
+            }
+            #openSearchBtn {
+                display: none;
             }
         }
     }

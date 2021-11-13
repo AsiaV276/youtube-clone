@@ -126,7 +126,6 @@ function App() {
                   </IconButton>
                   <Link to="/">
                       <img src={logo} alt="" id="largeLogo" className="logo"/>
-                      {/*<img src={mobileLogo} alt="" id="mobileLogo" className="logo" />*/}
                   </Link>
               </div>
 
