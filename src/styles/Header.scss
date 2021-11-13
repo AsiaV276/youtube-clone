@@ -1,7 +1,7 @@
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 5px;
+    padding: 7px 5px 0px 5px;
     background-color: rgba($color: #ffffff, $alpha: 0.98);
     position: fixed;
     top: 0;
@@ -14,14 +14,19 @@
         .logo {
             margin-left: 15px;
         }
+        /*#largeLogo {
+            display: none;
+        }
+        #mobileLogo {
+            display: block;
+            width: 40px;
+        }*/
     }
     .header-left,
-    .header-right {
+    .header-right,
+    .searchIcon {
         display: flex;
         align-items: center;
-    }
-    .search {
-        display: none;
     }
     .icon {
         color: rgba(0, 0, 0, 0.55);
@@ -30,10 +35,61 @@
         width: 40px;
         height: auto;
     }
+    #backArrow {
+        display: none;
+        align-self: center;
+        margin-left: 5px;
+    }
+    .search {
+        display: none;
+        flex: 1;
+        margin-left: 7%;
+        margin-right: 7%;
+        align-items: center;
+
+        input {
+            flex: 1;
+            padding: 5px 10px;
+            font-size: 20px;
+            border: 1px lightgray solid;
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+            width: 100%;
+        }
+        .button {
+            padding: 5px 20px;
+            border: 1px lightgray solid;
+            background-color: #f8f8f8;
+            border-left: none;
+            cursor: pointer;
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+            
+            .searchIcon {
+                color: gray;
+                font-size: 24px;
+                padding: 0;
+            }
+        }
+    }
+    .header-right {
+        #appsIcon {
+            display: none;
+        }
+    }
 }
 
 @media only screen and (min-width: 500px) {
     .header {
+        padding: 5px;
+        /*.header-left {
+            #largeLogo {
+                display: block;
+            }
+            #mobileLogo {
+                display: none;
+            }
+        }*/
         .search {
             display: flex;
             flex: 1;
@@ -62,6 +118,11 @@
                     color: gray;
                     font-size: 20px;
                 }
+            }
+        }
+        .header-right {
+            #appsIcon {
+                display: flex;
             }
         }
     }

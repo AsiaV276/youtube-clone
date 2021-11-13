@@ -64,6 +64,16 @@ function Header() {
         //setMenuOpen(false)
     }
 
+    //show search bar and back arrow when search icon is clicked
+    //back arrow hides search bar again and displays original header
+    const openSearchBar = () => {
+        let searchBar = document.getElementById('searchBar')
+        let headerRight = document.getElementById('header-right')
+        searchBar.style.display = 'block'
+        headerRight.style.display = 'none'
+
+    }
+
 
     /*if(menuOpen === true) {
         window.addEventListener('click', function(e){   
@@ -81,6 +91,7 @@ function Header() {
     //performSearch() returns/routes to Search page with data 
     //data mapped through on search page
     
+    
     return (
         <>
             <div className="header">
@@ -92,7 +103,16 @@ function Header() {
                         <img src={logo} alt="" className="logo"/>
                     </Link>
                 </div>
-                <div className="search">
+                {/*<form onSubmit={handleSubmit} className="search">
+                    <input 
+                        type="text" 
+                        placeholder="Search"
+                        value={inputSearch}
+                        onChange={e => setInputSearch(e.target.value)}
+                    />
+                    <button type="submit" className="button"><SearchIcon className="searchIcon"/></button>
+                </form>*/}
+                {/*<div className="search">
                     <input 
                         type="text" 
                         placeholder="Search"
@@ -102,7 +122,7 @@ function Header() {
                     <Link to={`/search/${inputSearch}`} className="button">
                         <SearchIcon className="searchIcon"/>
                     </Link>
-                </div>
+                </div>*/}
                 <div className="header-right">
                     <IconButton>
                         <VideoCallIcon className="icon"/>

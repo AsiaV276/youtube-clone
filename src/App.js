@@ -5,7 +5,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  useHistory
 } from 'react-router-dom';
 import Home from './Home';
 import Trending from './Trending';
@@ -16,12 +17,14 @@ import Menu from './Menu';
 import './styles/Header.css';
 import firebase from 'firebase';
 import FirebaseAuth from 'react-firebaseui/FirebaseAuth';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import MenuIcon from '@material-ui/icons/Menu';
 import VideoCallIcon from '@material-ui/icons/VideoCall';
 import AppsIcon from '@material-ui/icons/Apps';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import logo from './images/YouTube_Logo_2017.svg';
+import mobileLogo from './images/YouTube_full-color_icon.svg';
 import { IconButton } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 
@@ -72,46 +75,98 @@ function App() {
     const searchAction = () => {
       console.log(inputSearch)
       setFullInput(inputSearch)
+      //console.log('submit works'); 
     }
+
+    const openSearchBar = () => {
+      var openSearchBtn = document.getElementById('openSearchBtn')
+      var searchBar = document.getElementById('searchBar')
+      var headerLeft = document.getElementById('headerLeft')
+      var headerRight = document.getElementById('headerRight')
+      var backArrow = document.getElementById('backArrow')
+      openSearchBtn.style.display = 'none'
+      backArrow.style.display = 'flex'
+      searchBar.style.display = 'flex'
+      headerRight.style.display = 'none'
+      headerLeft.style.display = 'none'
+  }
+    const closeSearchBar = () => {
+      var openSearchBtn = document.getElementById('openSearchBtn')
+      var searchBar = document.getElementById('searchBar')
+      var headerLeft = document.getElementById('headerLeft')
+      var headerRight = document.getElementById('headerRight')
+      var backArrow = document.getElementById('backArrow')
+      openSearchBtn.style.display = 'flex'
+      backArrow.style.display = 'none'
+      searchBar.style.display = 'none'
+      headerRight.style.display = 'flex'
+      headerLeft.style.display = 'flex'
+    }
+
+    // testing submit form
+    /*let history = useHistory();
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      searchAction()
+      
+      //console.log(history);
+    
+      //history.push('/search')
+    };*/
 
   return (
     <div className="app">
       <Router>
           <div className="header">
-              <div className="header-left">
+              <div id="headerLeft" className="header-left">
                   <IconButton onClick={openMenu}>
                       <MenuIcon className="icon"/>
                   </IconButton>
                   <Link to="/">
-                      <img src={logo} alt="" className="logo"/>
+                      <img src={logo} alt="" id="largeLogo" className="logo"/>
+                      {/*<img src={mobileLogo} alt="" id="mobileLogo" className="logo" />*/}
                   </Link>
               </div>
-              <form onSubmit={(e) => e.preventDefault()} className="search">
+
+              <IconButton  id="backArrow" className="icon" onClick={closeSearchBar}>
+                  <ArrowBackIcon/>
+              </IconButton>
+
+              <form id="searchBar" className="search">  {/*onSubmit={handleSubmit}*/}
                   <input 
                       type="text" 
                       placeholder="Search"
                       value={inputSearch}
                       onChange={e => setInputSearch(e.target.value)}
                   />
+                  {/*<button type="submit" className="button"><SearchIcon className="searchIcon"/></button>*/}
                   <Link to={{
                     pathname: '/search',
                     search: `?search=${inputSearch}`
-                    }} className="button"
-                    onClick={searchAction}>
-                      <SearchIcon className="searchIcon"/>
+                    }}
+                    onClick={searchAction} className="button"
+                    >
+                    <SearchIcon className="searchIcon"/>
                   </Link>
               </form>
-              <div className="header-right">
+              
+              <div id="headerRight" className="header-right">
                   <IconButton>
                       <VideoCallIcon className="icon"/>
                   </IconButton>
-                  <IconButton>
+                  <IconButton  id="appsIcon">
                       <AppsIcon className="icon"/>
                   </IconButton>
                   <IconButton>
                       <NotificationsIcon className="icon"/>
                   </IconButton>
-                  
+
+                  <IconButton id="openSearchBtn" className="searchIcon icon" onClick={openSearchBar}>
+                      <SearchIcon/>
+                  </IconButton>
+
                   {isSignedIn ? (
                       <>
                           <AccountCircleIcon className="profile-pic"/> {/*if true, user google profile picture*/}
@@ -141,7 +196,7 @@ function App() {
               <Home/>
             </Route>
             <Route exact path="/search">
-              <Search searchInput={fullInput}/>
+              <Search searchInput={fullInput}/> {/* searchInput={fullInput} */}
             </Route>
             <Route path="/trending">
               <Trending/>
