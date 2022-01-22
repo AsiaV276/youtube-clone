@@ -1,6 +1,6 @@
 .videoRow-container {
     display: flex;
-    height: 180px;
+    height: auto;
     width: 100%;
     max-width: 1300px;
     box-sizing: border-box;
@@ -8,45 +8,65 @@
     cursor: pointer;
     
     .thumbnail {
-        width: 320px;
-        height: 100%;
+        width: 145px;
+        height: 95px;
     }
     .videoCard-info {
-        padding: 5px 5px 5px 20px;
+        padding: 0px 5px 0px 20px;
         flex: 1;
         .video-title {
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 500;
             color: black;
             height: 60px;
             overflow: hidden;
         }
-        .channel-title {
+        div {
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            .channel-title {
+                display: flex;
+                align-items: center;
+                .verified-icon {
+                    height: 14px;
+                    width: auto;
+                    padding: 5px 0px 0px 5px;
+                }
+            }
+            p {
+                font-size: small;
+                color: rgba(0, 0, 0, 0.7);
+            }
         }
-        .verified-icon {
-            height: 14px;
-            width: auto;
-            padding: 5px 0px 0px 5px;
-        }
-        p {
-            font-size: small;
-            color: rgba(0, 0, 0, 0.7);
-        }
-        .description {
+        
+        /*.description {
             width: 100%;
             height: 20%;
             padding-top: 10px;
-            /*word-wrap: break-word;
+            word-wrap: break-word;
             text-overflow: ellipsis;
-            white-space: nowrap;*/
+            white-space: nowrap;
             overflow: hidden;
-        }
+            border: green solid 1px;
+        }*/
     }
     
     .more-icon {
         color: gray;
     }
 
+}
+@media only screen and (min-width: 675px) {
+    .videoRow-container {
+        height: 180px;
+        .thumbnail {
+            width: 320px;
+            height: 100%;
+        }
+        .videoCard-info {
+            .video-title {
+                font-size: 20px;
+            }
+        }
+    }
 }

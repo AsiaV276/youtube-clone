@@ -73,9 +73,7 @@ function App() {
         //setMenuOpen(false)
     }
     const searchAction = () => {
-      console.log(inputSearch)
       setFullInput(inputSearch)
-      //console.log('submit works'); 
     }
 
     const openSearchBar = () => {
@@ -89,7 +87,15 @@ function App() {
       searchBar.style.display = 'flex'
       headerRight.style.display = 'none'
       headerLeft.style.display = 'none'
-  }
+      //searchBar.focus()
+    }
+
+    /*const unfocused = () => {
+      console.log('unfocused');
+      var searchInput = document.getElementById('searchInput')
+      searchInput.focus()
+    }*/
+
     const closeSearchBar = () => {
       var openSearchBtn = document.getElementById('openSearchBtn')
       var searchBar = document.getElementById('searchBar')
@@ -135,10 +141,13 @@ function App() {
 
               <form id="searchBar" className="search">  {/*onSubmit={handleSubmit}*/}
                   <input 
+                      id="searchInput"
                       type="text" 
                       placeholder="Search"
                       value={inputSearch}
                       onChange={e => setInputSearch(e.target.value)}
+                      //autoFocus
+                      //onBlur={this.focus()}
                   />
                   {/*<button type="submit" className="button"><SearchIcon className="searchIcon"/></button>*/}
                   <Link to={{

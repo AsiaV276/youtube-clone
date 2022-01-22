@@ -19,7 +19,7 @@ function VideoCard({videoTitle, channelTitle, viewCount, publishedAt, thumbnailU
                     <div className="channel-title">{channelTitle} <CheckCircleRoundedIcon className="verified-icon"/></div>
                     <div className="video-stats">
                         <p>{viewCount} {" views"} &bull; &nbsp;</p>
-                        <p>{publishedAt} {" hours ago"}</p>
+                        <p>{publishedAt}</p>
                     </div>
                 </div>
                 <MoreVertIcon className="more-icon"/>
