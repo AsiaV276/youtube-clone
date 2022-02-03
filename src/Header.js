@@ -53,17 +53,42 @@ function Header() {
     /*useEffect(() => {
         
     })*/
+
+    //NOTHING ON THIS PAGE IS USED, ALL HEADER CODE IS ON THE APP PAGE
+
+    /*
     const openMenu = () => {
         let menu = document.getElementById('menu-container')
         menu.style.display = 'block'
         //setMenuOpen(true)
     }
     const closeMenu = () => {
+        console.log('click?');
         let menu = document.getElementById('menu-container')
         menu.style.display = 'none'
         //setMenuOpen(false)
     }
-
+    const closeMenuOutsideClick = () => {
+            console.log('click');
+            var menuSections = document.getElementsByClassName('menu-section')
+            var menuHeader = document.getElementById('menu-header')
+            
+            if (menuSections[0].contains(e.target) || 
+                menuSections[1].contains(e.target) ||
+                menuSections[2].contains(e.target) ||
+                menuSections[3].contains(e.target) ||
+                menuSections[4].contains(e.target) ||
+                menuHeader.contains(e.target)){
+                // Clicked in box
+                console.log('clicked in menu');
+            } 
+            else {
+                // Clicked outside the box
+                console.log('clicked outside menu');
+                document.getElementById('menu-container').style.display = 'none'
+            }
+    }
+*/
     //show search bar and back arrow when search icon is clicked
     //back arrow hides search bar again and displays original header
     const openSearchBar = () => {
@@ -147,7 +172,7 @@ function Header() {
                     )}
                 </div>
             </div>
-            <div id="menu-container">
+            <div id="menu-container" onClick={closeMenuOutsideClick}>
             <div className="header-left">
                 <IconButton onClick={closeMenu}>
                     <MenuIcon className="icon"/>

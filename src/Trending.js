@@ -26,9 +26,28 @@ function Trending() {
    
     function diffHours(dt2, dt1) {
         var newPublishedDate = new Date(dt1.replace(/-/g,'/').replace('T',' ').replace('Z',''));
-        var diff =(dt2.getTime() - newPublishedDate.getTime()) / 1000;
-        diff /= (60 * 60);
-        return Math.abs(Math.round(diff));
+        var totalHours =(dt2.getTime() - newPublishedDate.getTime()) / 1000;
+        totalHours /= (60 * 60);
+        var diff
+        if(totalHours < 24) {
+            var rHours = Math.abs(Math.round(totalHours))
+            if(rHours == 1) {
+                return rHours + " hour ago"
+            }
+            else {
+                return rHours + " hours ago"
+            }
+        }
+        else {
+            diff = totalHours / 24
+            var rDiff = Math.abs(Math.round(diff))
+            if(rDiff == 1) {
+                return rDiff + " day ago"
+            }
+            else {
+                return rDiff + " days ago"
+            }
+        } 
     }
     function formatNumber(num) {
         return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')

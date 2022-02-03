@@ -27,7 +27,7 @@ import {
 
 function Menu() {//isOpen
     //returns menu display style to open and close menu
-    
+
     return (
             <div className="menu"> 
                 <div className="menu-section">
